@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceDemoSuite">
+
+    <!-- Suite-level parameter for the base URL -->
+    <parameter name="baseUrl" value="https://www.saucedemo.com/" />
+
+    <!-- Valid credentials -->
+    <parameter name="validUsername" value="standard_user" />
+    <parameter name="validPassword" value="secret_sauce" />
+
+    <!-- Invalid credentials -->
+    <parameter name="invalidUsername" value="standard_Invaliduser" />
+    <parameter name="invalidPassword" value="secret_Invalidpwd" />
+
+    <test name="SauceDemoTests">
+        <classes>
+            <class name="com.saucedemo.tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>
